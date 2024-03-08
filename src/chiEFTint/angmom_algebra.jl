@@ -342,7 +342,7 @@ function HObracket_d6j(nl, ll, nr, lr, n1, l1, n2, l2, Lam, d::Float64, dtri, dc
                     for la = ea:-2:0
                         if !tri_check(la,lb,l1);continue;end
                         if !tri_check(la,ll,lc);continue;end
-                        t9j = wigner9j_d6jint(la*2,lb*2,l1*2,lc*2,ld*2,l2*2,ll*2,lr*2,Lam*2,d6j)
+                        t9j = wigner9j(la,lb,l1,lc,ld,l2,ll,lr,Lam)
                         tmp = ((-d)^ed)  * t 
                         tmp *= t9j 
                         tmp *= Ghob(e1, l1, ea, la, eb, lb, dtri, dcgm0)
